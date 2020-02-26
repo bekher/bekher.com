@@ -28,12 +28,8 @@ const SOCIAL_MAPPING = {
 
 export default ({ type = "twitter" }) => {
   return (
-    <a href={SOCIAL_MAPPING[type].link}>
-      <FontAwesomeIcon
-        aria-label={type}
-        color="white"
-        icon={SOCIAL_MAPPING[type].component}
-      />
+    <a href={SOCIAL_MAPPING[type].link} aria-label={type}>
+      <FontAwesomeIcon color="white" icon={SOCIAL_MAPPING[type].component} />
     </a>
   )
 }
