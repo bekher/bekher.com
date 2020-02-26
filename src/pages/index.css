@@ -1,0 +1,23 @@
+.index-header {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  flex-grow: 1;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-summary {
+  display: flex;
+  margin: 1em;
+  max-width: 1000px;
+}
+
+.index-summary-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}

@@ -1,21 +1,54 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import "./index.css"
+
+const HOMEPAGE_QUERY = graphql`
+  query {
+    file(relativePath: { eq: "home.md" }) {
+      relativePath
+      childMarkdownRemark {
+        frontmatter {
+          title
+          caption
+        }
+        html
+      }
+    }
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
+const IndexPage = () => {
+  const data = useStaticQuery(HOMEPAGE_QUERY)
+  const markdownData = data.file.childMarkdownRemark
+  const siteName = data.site.siteMetadata.title
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <header className="index-header">
+        <div>
+          <h1>{siteName}.</h1>
+          <h2>{markdownData.frontmatter.caption}</h2>
+          <div className="index-summary-container">
+            <div
+              className="index-summary"
+              dangerouslySetInnerHTML={{
+                __html: markdownData.html,
+              }}
+            ></div>
+          </div>
+        </div>
+      </header>
+    </Layout>
+  )
+}
 
 export default IndexPage
