@@ -21,10 +21,12 @@ const typography = new Typography({
     {
       name: "Cairo",
       styles: ["700"],
+      display: "swap",
     },
     {
       name: "Open Sans",
       styles: ["400", "400i", "700", "700i"],
+      display: "swap",
     },
   ],
 })
