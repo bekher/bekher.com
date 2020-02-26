@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `beekher.com`,
+        name: `bekher.com`,
         short_name: `bekher.com`,
         start_url: `/`,
         background_color: `#000e78`,
