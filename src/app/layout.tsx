@@ -16,11 +16,10 @@ export const metadata: Metadata = {
     "consulting",
     "AWS",
     "Next.js",
-    "performance optimization",
-    "core web vitals",
     "agentic AI",
     "migration",
-    "kubernetes",
+    "web platform",
+    "system migration"
   ],
   authors: [{ name: "Greg Bekher" }],
   openGraph: {

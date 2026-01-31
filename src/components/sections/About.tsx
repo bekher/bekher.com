@@ -1,6 +1,7 @@
 import { about } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { renderWithLinks } from "@/lib/utils";
 
 export function About() {
   return (
@@ -50,7 +51,7 @@ export function About() {
                         d="M4.5 12.75l6 6 9-13.5"
                       />
                     </svg>
-                    {item}
+                    {renderWithLinks(item)}
                   </li>
                 ))}
               </ul>

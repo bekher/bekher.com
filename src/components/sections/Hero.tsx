@@ -1,6 +1,7 @@
 import { hero, siteConfig } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
+import { renderWithLinks } from "@/lib/utils";
 
 export function Hero() {
   return (
@@ -28,7 +29,7 @@ export function Hero() {
 
           {/* Trust Line */}
           <p className="mt-6 text-sm font-medium text-slate-500 dark:text-slate-400">
-            {hero.trustLine}
+            {renderWithLinks(hero.trustLine)}
           </p>
 
           {/* CTAs */}
@@ -36,13 +37,15 @@ export function Hero() {
             <Button href={siteConfig.calendlyUrl} size="large">
               {hero.primaryCta}
             </Button>
-            <Button
-              href={siteConfig.servicessPdfUrl}
-              variant="secondary"
-              size="large"
-            >
-              {hero.secondaryCta}
-            </Button>
+            {siteConfig.showServicesPdfCta && (
+              <Button
+                href={siteConfig.servicessPdfUrl}
+                variant="secondary"
+                size="large"
+              >
+                {hero.secondaryCta}
+              </Button>
+            )}
           </div>
         </div>
       </Container>

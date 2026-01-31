@@ -1,5 +1,13 @@
 import type { Metric, Service, CaseStudy, WorkStep, NavItem } from "@/types";
 
+// Text patterns that should be rendered as links
+export const textLinks: Record<string, string> = {
+  Inline: "https://getinline.ai",
+};
+
+// Set to true when the services PDF is ready to show
+const SHOW_SERVICES_PDF_CTA = false;
+
 export const siteConfig = {
   name: "Greg Bekher",
   title: "Principal Platform Engineer",
@@ -8,6 +16,7 @@ export const siteConfig = {
   calendlyUrl: "https://calendly.com/bekher/30min",
   linkedinUrl: "https://linkedin.com/in/bekher",
   servicessPdfUrl: "/greg-bekher-services.pdf",
+  showServicesPdfCta: SHOW_SERVICES_PDF_CTA,
 };
 
 export const navItems: NavItem[] = [
@@ -23,10 +32,10 @@ export const hero = {
   headline: "Principal Platform Engineer & Agentic AI Builder",
   subheadline:
     "Build AWS-native platforms, migrate revenue-critical systems, ship agentic AI, fix site performance, improve reliability at scale.",
-  trustLine: "Ex-Amazon, Tripadvisor, Thrasio · Founder/CTO @ Inline · Reports directly to CTOs & eng leaders",
+  trustLine: "Founder/CTO @ Inline · Ex-Amazon, Tripadvisor, Thrasio · Trusted by CTOs & technology leaders",
   primaryCta: "Book a 30-min intro call",
   secondaryCta: "Download services brief",
-  badge: "Based in NYC ",
+  badge: "Built & Scaling 20M+ PV/mo",
 };
 
 export const proofLogos = [
@@ -39,34 +48,34 @@ export const proofLogos = [
 
 export const metrics: Metric[] = [
   {
+    value: "20M+",
+    label: "Monthly pageviews served",
+    context: "Inline Technologies",
+  },
+  {
+    value: ">560",
+    label: "Developer weeks saved",
+    context: "Amazon"
+  },
+  {
+    value: "50+",
+    label: "Services & microservices operationalized",
+    context: "Production systems",
+  },
+  {
+    value: ">1M",
+    label: "Questions answered by agentic AI",
+    context: "Inline Technologies",
+  },
+  {
     value: "10+ Years",
     label: "Experience building software",
     context: "Across many business domains",
   },
   {
-    value: "~20M",
-    label: "Monthly pageviews supported",
-    context: "Inline Technologies",
-  },
-  {
-    value: ">1k",
-    label: "Code reviews completed",
-    context: "Across many teams",
-  },
-  {
-    value: ">1M",
-    label: "AI questions answered",
-    context: "Inline Technologies",
-  },
-  {
-    value: "80+",
+    value: "150+",
     label: "High-sev incidents mitigated",
     context: "Amazon Pharmacy",
-  },
-  {
-    value: "92%",
-    label: "Lighthouse score improvement",
-    context: "Tripadvisor",
   },
   {
     value: ">90%",
@@ -82,7 +91,7 @@ export const metrics: Metric[] = [
 
 export const services: Service[] = [
   {
-    title: "Migration & Replatform Sprint",
+    title: "Migration & Replatform",
     bestFor:
       "High-traffic sites stuck on legacy CMS, third-party hosting risk, SEO/performance emergencies",
     proof: [
@@ -98,10 +107,10 @@ export const services: Service[] = [
       "Performance budgets & observability",
       "Post-migration stabilization (2-4 weeks)",
     ],
-    timeline: "4-20+ weeks depending on complexity",
+    // timeline: "4-20+ weeks depending on complexity",
   },
   {
-    title: "Platform Acceleration Retainer",
+    title: "Platform Acceleration",
     bestFor:
       "Teams with platform drag, reliability/cost issues, velocity problems, or need senior architectural guidance without a full-time hire",
     proof: [
@@ -112,12 +121,11 @@ export const services: Service[] = [
     ],
     deliverables: [
       "Architecture, designs, code, and infrastructure",
-      "Hands-on CI/CD, observability, reliability work",
+      "CI/CD, observability, reliability",
       "Developer tooling & velocity improvements",
-      "Weekly status reports & quarterly roadmap alignment",
-      "Team mentorship & knowledge transfer",
+      "Team mentorship & upskilling",
     ],
-    engagement: "15-20 hrs/week, weekly demos, async-friendly",
+    // engagement: "5-20 hrs/week, async-friendly",
   },
   {
     title: "Agentic AI in Production",
@@ -152,7 +160,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     solution: [
       "Architected, launched, and drove cross-org alignment for the PHIRE Web Platform ",
-      "Built React microcrontend, reference architecture, data-connected widget library with 28 shared components",
+      "Built React microfrontends, reference architecture, data-connected widget library with 28 shared components",
       "Launched multi-tenant TypeScript GraphQL service and AWS infrastructure supporting plug-and-play widgets",
       "Designed a multi-tenant authentication and authorization service approved by Amazon HealthSec enabling third-party IDP deprecation", 
       "Drove Pharmacy-wide adoption by hosting weekly office hours, roadshows with 100+ attendees, and demos",
@@ -202,7 +210,7 @@ export const caseStudies: CaseStudy[] = [
       "Migrated Java k8s CMS from third-party environment to internally-managed AWS",
       "Led cross-team execution across multiple engineering teams",
       "Integrated company's first A/B test platform",
-      "Provide technical guidance and operational excellence upskilling arcoss the technology team",
+      "Provide technical guidance and operational excellence upskilling across the technology team",
     ],
     results: [
       "50% decrease in costs by migrating to internally-managed AWS",
@@ -215,26 +223,29 @@ export const caseStudies: CaseStudy[] = [
 
 export const workSteps: WorkStep[] = [
   {
-    title: "Discovery & success criteria",
+    title: "Requirement collection & discovery",
     description:
-      "Understand your system, pain points, and what success looks like",
+      "Understand problems, risks, systems,  work with stakeholders to define and quantify success",
   },
   {
-    title: "Architecture & plan",
-    description: "Risks, milestones, timeline, decision points",
+    title: "Design & architecture",
+    description:
+      "Work backwards from problems and success criteria, craft a timeline, iterate on designs, alignment across stakeholders",
   },
   {
     title: "Build & integrate",
-    description: "Hands-on execution alongside your team",
+    description:
+      "Hands-on execution alongside your team, POC → tracer bullet → feature completeness",
   },
   {
     title: "Launch & harden",
     description:
-      "Cutover, performance validation, observability, on-call readiness",
+      "QA, performance validation, observability, on-call readiness, cutover",
   },
   {
     title: "Enablement",
-    description: "Handoff, documentation, training, ongoing support options",
+    description:
+      "Operational excellence upskilling & training, documentation, ongoing support options",
   },
 ];
 
@@ -247,15 +258,17 @@ export const idealFit = {
   notFit: [
     "Full-time engagements",
     "Non-strategic engineering staff augmentation",
-    "Undefined or Constantly Shifting Scope",
+    "Competitive engagements",
   ],
 };
 
 export const about = {
   bio: [
     "Based in NYC (Lower Manhattan)",
-    "Previously: Boston, Chicago, DC area",
+    // "Previously: Boston, Chicago, DC area",
     "Principal-level execution + founder perspective",
+    "Building Inline AI as Founder & CTO",
+    "Selectively advising companies on platform modernization and AI",
     "Experience across a broad and unique set of business domains",
     "Trusted by CTOs, engineering leaders, and founders",
     "Builds end-to-end: architecture → implementation → operations",

@@ -1,6 +1,7 @@
 import { caseStudies } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { renderWithLinks } from "@/lib/utils";
 
 export function CaseStudies() {
   return (
@@ -19,7 +20,7 @@ export function CaseStudies() {
             >
               {/* Header */}
               <div className="bg-slate-900 dark:bg-slate-950 text-white px-6 py-4 sm:px-8 sm:py-5">
-                <h3 className="text-xl sm:text-2xl font-bold">{study.company}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold">{renderWithLinks(study.company)}</h3>
                 <p className="mt-1 text-slate-300 text-sm sm:text-base">
                   {study.context}
                 </p>
@@ -88,7 +89,7 @@ export function CaseStudies() {
                               d="M4.5 12.75l6 6 9-13.5"
                             />
                           </svg>
-                          {item}
+                          {renderWithLinks(item)}
                         </li>
                       ))}
                     </ul>

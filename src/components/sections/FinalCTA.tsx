@@ -20,14 +20,16 @@ export function FinalCTA() {
             <Button href={siteConfig.calendlyUrl} size="large">
               Book a call
             </Button>
-            <Button
-              href={siteConfig.servicessPdfUrl}
-              variant="secondary"
-              size="large"
-              className="border-slate-600 bg-transparent text-white hover:bg-slate-800 hover:border-slate-500"
-            >
-              Download services brief
-            </Button>
+            {siteConfig.showServicesPdfCta && (
+              <Button
+                href={siteConfig.servicessPdfUrl}
+                variant="secondary"
+                size="large"
+                className="border-slate-600 bg-transparent text-white hover:bg-slate-800 hover:border-slate-500"
+              >
+                Download services brief
+              </Button>
+            )}
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">

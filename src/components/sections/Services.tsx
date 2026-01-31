@@ -2,6 +2,7 @@ import { services } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { renderWithLinks } from "@/lib/utils";
 
 export function Services() {
   return (
@@ -9,7 +10,7 @@ export function Services() {
       <Container>
         <SectionHeader
           title="How I Can Help"
-          subtitle="Specialized engagements tailored to your platform challenges"
+          subtitle="I take a small number of high-impact and specialized consulting engagements tailored to your platform challenges. "
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -40,7 +41,7 @@ export function Services() {
                       className="text-sm text-slate-600 dark:text-slate-300 flex items-start gap-2"
                     >
                       <span className="text-blue-500 mt-1">•</span>
-                      {item}
+                      {renderWithLinks(item)}
                     </li>
                   ))}
                 </ul>
