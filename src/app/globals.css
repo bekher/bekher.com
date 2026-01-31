@@ -3,7 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 
   /* Blue accent colors */
   --color-blue-50: #eff6ff;
@@ -45,6 +46,11 @@
   --color-red-500: #ef4444;
   --color-red-600: #dc2626;
   --color-red-900: #7f1d1d;
+}
+
+/* Headings use Montserrat */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 html {
