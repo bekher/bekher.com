@@ -44,6 +44,8 @@ export const proofLogos = [
   { name: "Thrasio", logo: "thrasio" },
   { name: "Caring", logo: "caring" },
   { name: "Inline", logo: "inline" },
+  { name: "Tenable", logo: "tenable" },
+  { name: "Northrop Grumman", logo: "northrop-grumman" },
 ];
 
 export const metrics: Metric[] = [
