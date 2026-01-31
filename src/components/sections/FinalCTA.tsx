@@ -33,13 +33,17 @@ export function FinalCTA() {
           </div>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm">
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              {siteConfig.email}
-            </a>
-            <span className="hidden sm:inline text-slate-600">|</span>
+            {siteConfig.email != null && (
+              <>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  {siteConfig.email}
+                </a>
+                <span className="hidden sm:inline text-slate-600">|</span>
+              </>
+            )}
             <a
               href={siteConfig.linkedinUrl}
               className="text-slate-400 hover:text-white transition-colors"

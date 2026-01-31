@@ -19,12 +19,14 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="text-sm text-slate-600 hover:text-slate-900 transition-colors dark:text-slate-400 dark:hover:text-white"
-            >
-              {siteConfig.email}
-            </a>
+            {siteConfig.email != null && (
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="text-sm text-slate-600 hover:text-slate-900 transition-colors dark:text-slate-400 dark:hover:text-white"
+              >
+                {siteConfig.email}
+              </a>
+            )}
             <a
               href={siteConfig.linkedinUrl}
               className="text-sm text-slate-600 hover:text-slate-900 transition-colors dark:text-slate-400 dark:hover:text-white"

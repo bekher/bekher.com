@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { about } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -10,23 +11,18 @@ export function About() {
         <SectionHeader title="About" />
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            {/* Headshot placeholder */}
-            <div className="flex justify-center md:justify-start">
-              <div className="h-48 w-48 rounded-2xl bg-slate-200 dark:bg-slate-800 flex items-center justify-center">
-                <svg
-                  className="h-20 w-20 text-slate-400 dark:text-slate-600"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                  />
-                </svg>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center">
+            {/* Headshot */}
+            <div className="flex justify-center">
+              <div className="relative h-64 w-64 md:h-72 md:w-72 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 shrink-0">
+                <Image
+                  src="/images/bekher-headshot-aug-25-optimized.jpeg"
+                  alt="Greg Bekher"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 288px, 256px"
+                  priority
+                />
               </div>
             </div>
 
@@ -39,7 +35,7 @@ export function About() {
                     className="text-slate-600 dark:text-slate-300 flex items-start gap-3"
                   >
                     <svg
-                      className="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0"
+                      className="h-5 w-5 text-blue-500 mt-0.5 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       strokeWidth={2}

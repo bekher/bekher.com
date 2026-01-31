@@ -12,7 +12,7 @@ export const siteConfig = {
   name: "Greg Bekher",
   title: "Principal Platform Engineer",
   location: "NYC",
-  email: "greg@bekher.com",
+  email: null,
   calendlyUrl: "https://calendly.com/bekher/30min",
   linkedinUrl: "https://linkedin.com/in/bekher",
   servicessPdfUrl: "/greg-bekher-services.pdf",
@@ -29,9 +29,8 @@ export const navItems: NavItem[] = [
 ];
 
 export const hero = {
-  headline: "Principal Platform Engineer & Agentic AI Builder",
-  subheadline:
-    "Build AWS-native platforms, migrate revenue-critical systems, ship agentic AI, fix site performance, improve reliability at scale.",
+  headline: "Stop yeeting into prod. Start shipping like an operator",
+  subheadline: "Greg Bekher is a Principal Platform Engineer & Agentic AI Builder with deep experience in AWS, web services, automation, and agentic AI at scale.",
   trustLine: "Founder/CTO @ Inline · Ex-Amazon, Tripadvisor, Thrasio · Trusted by CTOs & technology leaders",
   primaryCta: "Book a 30-min intro call",
   secondaryCta: "Download services brief",

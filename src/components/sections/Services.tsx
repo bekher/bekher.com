@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { renderWithLinks } from "@/lib/utils";
 
+const SHOW_PROOF = false;
+
 export function Services() {
   return (
     <section id="services" className="py-20 bg-white dark:bg-slate-950">
@@ -30,22 +32,24 @@ export function Services() {
                 <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">{service.bestFor}</p>
               </div>
 
-              <div className="mb-4">
-                <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                  Proof
-                </span>
-                <ul className="mt-2 space-y-1">
-                  {service.proof.map((item, i) => (
-                    <li
-                      key={i}
-                      className="text-sm text-slate-600 dark:text-slate-300 flex items-start gap-2"
-                    >
-                      <span className="text-blue-500 mt-1">•</span>
-                      {renderWithLinks(item)}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {SHOW_PROOF && (
+                <div className="mb-4">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    Proof
+                  </span>
+                  <ul className="mt-2 space-y-1">
+                    {service.proof.map((item, i) => (
+                      <li
+                        key={i}
+                        className="text-sm text-slate-600 dark:text-slate-300 flex items-start gap-2"
+                      >
+                        <span className="text-blue-500 mt-1">•</span>
+                        {renderWithLinks(item)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               <div className="mb-4 flex-grow">
                 <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
