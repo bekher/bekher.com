@@ -15,6 +15,7 @@ export const siteConfig = {
   email: null,
   calendlyUrl: "https://calendly.com/bekher/30min",
   linkedinUrl: "https://linkedin.com/in/bekher",
+  githubUrl: "https://github.com/bekher",
   servicessPdfUrl: "/greg-bekher-services.pdf",
   showServicesPdfCta: SHOW_SERVICES_PDF_CTA,
 };

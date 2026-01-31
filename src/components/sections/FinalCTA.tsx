@@ -52,6 +52,15 @@ export function FinalCTA() {
             >
               LinkedIn
             </a>
+            <span className="hidden sm:inline text-slate-600">|</span>
+            <a
+              href={siteConfig.githubUrl}
+              className="text-slate-400 hover:text-white transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </Container>

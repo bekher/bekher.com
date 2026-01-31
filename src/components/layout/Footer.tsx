@@ -35,6 +35,14 @@ export function Footer() {
             >
               LinkedIn
             </a>
+            <a
+              href={siteConfig.githubUrl}
+              className="text-sm text-slate-600 hover:text-slate-900 transition-colors dark:text-slate-400 dark:hover:text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
           </div>
         </div>
 
