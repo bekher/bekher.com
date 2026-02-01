@@ -6,6 +6,9 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "Terms of Service | Greg Bekher",
   description: "Terms of service for bekher.com",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

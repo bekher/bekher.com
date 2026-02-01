@@ -6,6 +6,9 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "Privacy Policy | Greg Bekher",
   description: "Privacy policy for bekher.com",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {
