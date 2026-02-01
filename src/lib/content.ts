@@ -38,7 +38,7 @@ export const hero = {
   trustLine: "Founder/CTO @ Inline · Ex-Amazon, Tripadvisor, Thrasio · Trusted by CTOs & technology leaders",
   primaryCta: "Book a 30-min intro call",
   secondaryCta: "Download services brief",
-  badge: "Built & Scaling 20M+ PV/mo",
+  badge: "Built & Scaling 30M+ PV/mo",
 };
 
 export const proofLogos = [
@@ -60,7 +60,7 @@ export const caseStudyUrls: Record<string, string> = {
 
 export const metrics: Metric[] = [
   {
-    value: "20M+",
+    value: "30M+",
     label: "Monthly pageviews served",
     context: "Inline Technologies",
   },
@@ -145,7 +145,7 @@ export const services: Service[] = [
       "Companies ready to ship AI features beyond demos; need streaming UX, safety guardrails, evals, and production reliability",
     proof: [
       "Inline: Designed, built, and operationalized entire agentic AI platform",
-      "Scale: ~20M pageviews, ~500k MAUs, ~50-100M monthly requests",
+      "Scale: ~30M pageviews, ~500k MAUs, ~50-100M monthly requests",
       "Stack: AWS Bedrock streaming, publisher admin tools, monetization customization",
       "Business: 0→1 to $120k ARR",
     ],
@@ -201,7 +201,7 @@ export const caseStudies: CaseStudy[] = [
       "Data warehouse and automated content ingestion",
     ],
     results: [
-      "~20M monthly pageviews across ~dozen publishers",
+      "~30M monthly pageviews across ~dozen publishers",
       "~500k monthly active end-users",
       ">1M queries answered by Inline's agentic AI",
       "Production-grade agentic AI at scale",

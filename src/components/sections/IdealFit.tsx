@@ -8,7 +8,7 @@ export function IdealFit() {
       <Container>
         <SectionHeader
           title="Is This a Good Fit?"
-          subtitle="Greg Bekher works best with certain types of engagements"
+          subtitle="Greg works best with certain types of engagements"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
