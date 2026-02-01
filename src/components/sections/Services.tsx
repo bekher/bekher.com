@@ -8,11 +8,11 @@ const SHOW_PROOF = false;
 
 export function Services() {
   return (
-    <section id="services" className="py-20 bg-white dark:bg-slate-950">
+    <section id="services" className="py-20 bg-slate-50 dark:bg-slate-900">
       <Container>
         <SectionHeader
-          title="How I Can Help"
-          subtitle="I take a small number of high-impact and specialized consulting engagements tailored to your platform challenges. "
+          title="Ways to Work Together"
+          subtitle="A small number of high-impact, specialized consulting engagements tailored to your platform challenges."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

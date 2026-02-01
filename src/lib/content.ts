@@ -8,6 +8,9 @@ export const textLinks: Record<string, string> = {
 // Set to true when the services PDF is ready to show
 const SHOW_SERVICES_PDF_CTA = false;
 
+// Set to true to show the Process section and nav link
+export const SHOW_PROCESS_SECTION = false;
+
 export const siteConfig = {
   name: "Greg Bekher",
   title: "Principal Platform Engineer",
@@ -21,17 +24,17 @@ export const siteConfig = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "Services", href: "/#services" },
   { label: "Proof", href: "/#proof" },
   { label: "Case Studies", href: "/#case-studies" },
-  { label: "Process", href: "/#process" },
+  { label: "Services", href: "/#services" },
+  ...(SHOW_PROCESS_SECTION ? [{ label: "Process", href: "/#process" }] : []),
   { label: "About", href: "/#about" },
   // { label: "Contact", href: "/#contact" },
 ];
 
 export const hero = {
-  headline: "Stop yeeting into prod. Start shipping like an operator",
-  subheadline: "Greg Bekher is a Principal Platform Engineer & Agentic AI Builder with deep experience in AWS, web services, automation, and agentic AI at scale.",
+  headline: "The person CTOs call when the replatform can't fail.",
+  subheadline: "Principal-level execution with a founder's perspective. Greg Bekher architects, builds, ships, and scales platforms on AWS.",
   trustLine: "Founder/CTO @ Inline · Ex-Amazon, Tripadvisor, Thrasio · Trusted by CTOs & technology leaders",
   primaryCta: "Book a 30-min intro call",
   secondaryCta: "Download services brief",
@@ -47,6 +50,13 @@ export const proofLogos = [
   { name: "Tenable", logo: "tenable" },
   { name: "Northrop Grumman", logo: "northrop-grumman" },
 ];
+
+/** Links for case study headlines (company name → URL). Only entries with a URL become links. */
+export const caseStudyUrls: Record<string, string> = {
+  "Amazon Pharmacy": "https://pharmacy.amazon.com",
+  "Inline (Founder/CTO)": "https://getinline.io",
+  "Caring.com": "https://caring.com",
+};
 
 export const metrics: Metric[] = [
   {
@@ -259,7 +269,7 @@ export const idealFit = {
   ],
   notFit: [
     "Full-time engagements",
-    "Non-strategic engineering staff augmentation",
+    "Staff augmentation without architectural scope",
     "Competitive engagements",
   ],
 };
@@ -280,5 +290,5 @@ export const about = {
 
 export const finalCta = {
   headline: "Let's talk about your platform",
-  availability: "Availability may become limited if you wait, book a call today",
+  availability: "Book a call today",
 };

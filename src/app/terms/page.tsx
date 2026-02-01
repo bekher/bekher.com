@@ -104,7 +104,7 @@ export default function TermsPage() {
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
                   This Site may contain links to third-party websites or services that are not
-                  owned or controlled by Gregory Bekher. I have no control over and assume no
+                  owned or controlled by Gregory Bekher. Greg Bekher has no control over and assumes no
                   responsibility for the content, privacy policies, or practices of any third-party
                   websites or services.
                 </p>
@@ -126,8 +126,8 @@ export default function TermsPage() {
                   Changes to Terms
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  I reserve the right to modify or replace these Terms at any time. If a revision
-                  is material, I will provide at least 30 days&apos; notice prior to any new terms
+                  Greg Bekher reserves the right to modify or replace these Terms at any time. If a revision
+                  is material, Greg Bekher will provide at least 30 days&apos; notice prior to any new terms
                   taking effect.
                 </p>
               </section>
@@ -137,7 +137,7 @@ export default function TermsPage() {
                   Contact
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  If you have any questions about these Terms, please contact me at{" "}
+                  If you have any questions about these Terms, please contact Greg Bekher at{" "}
                   <a
                     href="mailto:greg@bekher.com"
                     className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"

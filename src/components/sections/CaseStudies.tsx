@@ -1,11 +1,11 @@
-import { caseStudies } from "@/lib/content";
+import { caseStudies, caseStudyUrls } from "@/lib/content";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { renderWithLinks } from "@/lib/utils";
 
 export function CaseStudies() {
   return (
-    <section id="case-studies" className="py-20 bg-slate-50 dark:bg-slate-900">
+    <section id="case-studies" className="py-20 bg-white dark:bg-slate-950">
       <Container>
         <SectionHeader
           title="Case Studies"
@@ -20,7 +20,20 @@ export function CaseStudies() {
             >
               {/* Header */}
               <div className="bg-slate-900 dark:bg-slate-950 text-white px-6 py-4 sm:px-8 sm:py-5">
-                <h3 className="text-xl sm:text-2xl font-bold">{renderWithLinks(study.company)}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold">
+                  {caseStudyUrls[study.company] ? (
+                    <a
+                      href={caseStudyUrls[study.company]}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline hover:text-slate-200"
+                    >
+                      {study.company}
+                    </a>
+                  ) : (
+                    renderWithLinks(study.company)
+                  )}
+                </h3>
                 <p className="mt-1 text-slate-300 text-sm sm:text-base">
                   {study.context}
                 </p>
@@ -50,7 +63,7 @@ export function CaseStudies() {
                   {/* Solution */}
                   <div>
                     <h4 className="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-3">
-                      What I Did
+                      Approach & Delivery
                     </h4>
                     <ul className="space-y-2">
                       {study.solution.map((item, i) => (

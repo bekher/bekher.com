@@ -7,7 +7,7 @@ export function HowIWork() {
     <section id="process" className="py-20 bg-white dark:bg-slate-950">
       <Container>
         <SectionHeader
-          title="How I Work"
+          title="How Greg Bekher Works"
           subtitle="Pragmatic execution, high ownership, first-principles strategy, fast feedback loops, measurable outcomes"
         />
 

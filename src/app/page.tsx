@@ -9,6 +9,7 @@ import { HowIWork } from "@/components/sections/HowIWork";
 import { IdealFit } from "@/components/sections/IdealFit";
 import { About } from "@/components/sections/About";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { SHOW_PROCESS_SECTION } from "@/lib/content";
 
 export default function Home() {
   return (
@@ -18,11 +19,11 @@ export default function Home() {
         <Hero />
         <ProofStrip />
         <OutcomeMetrics />
-        <Services />
         <CaseStudies />
-        <HowIWork />
-        <IdealFit />
+        <Services />
+        {SHOW_PROCESS_SECTION && <HowIWork />}
         <About />
+        <IdealFit />
         <FinalCTA />
       </main>
       <Footer />

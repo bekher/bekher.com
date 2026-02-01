@@ -32,9 +32,9 @@ export default function PrivacyPage() {
                   Introduction
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  Gregory Bekher (&quot;I&quot;, &quot;me&quot;, or &quot;my&quot;) operates bekher.com (the &quot;Site&quot;).
-                  This page informs you of my policies regarding the collection, use, and disclosure
-                  of personal information when you use the Site.
+                  Gregory Bekher operates bekher.com (the &quot;Site&quot;). This page informs you of Greg Bekher&apos;s
+                  policies regarding the collection, use, and disclosure of personal information
+                  when you use the Site.
                 </p>
               </section>
 
@@ -43,9 +43,9 @@ export default function PrivacyPage() {
                   Information Collection and Use
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  This is a static informational website. I do not collect personal information
-                  directly through this Site. However, if you choose to contact me via email or
-                  schedule a call through the provided links, you may voluntarily provide personal
+                  This is a static informational website. Greg Bekher does not collect personal information
+                  directly through this Site. However, if you choose to contact Greg Bekher via email
+                  or schedule a call through the provided links, you may voluntarily provide personal
                   information such as your name, email address, and company information.
                 </p>
               </section>
@@ -57,8 +57,8 @@ export default function PrivacyPage() {
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
                   This Site may contain links to third-party services such as Calendly for
                   scheduling and LinkedIn for professional networking. These services have their
-                  own privacy policies, and I encourage you to review them. I am not responsible
-                  for the privacy practices of these third-party services.
+                  own privacy policies, and Greg Bekher encourages you to review them. Greg Bekher is not
+                  responsible for the privacy practices of these third-party services.
                 </p>
               </section>
 
@@ -90,7 +90,7 @@ export default function PrivacyPage() {
                   Data Security
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  I value your trust in providing any personal information and strive to use
+                  Greg Bekher values your trust in providing any personal information and strives to use
                   commercially acceptable means of protecting it. However, no method of transmission
                   over the Internet or method of electronic storage is 100% secure.
                 </p>
@@ -101,7 +101,7 @@ export default function PrivacyPage() {
                   Changes to This Privacy Policy
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  I may update this Privacy Policy from time to time. I will notify you of any
+                  Greg Bekher may update this Privacy Policy from time to time. Greg Bekher will notify you of any
                   changes by posting the new Privacy Policy on this page and updating the
                   &quot;Last updated&quot; date.
                 </p>
@@ -112,7 +112,7 @@ export default function PrivacyPage() {
                   Contact
                 </h2>
                 <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  If you have any questions about this Privacy Policy, please contact me at{" "}
+                  If you have any questions about this Privacy Policy, please contact Greg Bekher at{" "}
                   <a
                     href="mailto:greg@bekher.com"
                     className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
