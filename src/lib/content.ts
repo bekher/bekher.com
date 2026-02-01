@@ -2,7 +2,7 @@ import type { Metric, Service, CaseStudy, WorkStep, NavItem } from "@/types";
 
 // Text patterns that should be rendered as links
 export const textLinks: Record<string, string> = {
-  Inline: "https://getinline.ai",
+  Inline: "https://getinline.io",
 };
 
 // Set to true when the services PDF is ready to show

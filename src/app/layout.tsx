@@ -105,7 +105,7 @@ const jsonLd = {
       worksFor: {
         "@type": "Organization",
         name: "Inline",
-        url: "https://getinline.ai",
+        url: "https://getinline.io",
       },
     },
     {
