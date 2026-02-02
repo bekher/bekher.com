@@ -35,7 +35,7 @@ export const navItems: NavItem[] = [
 export const hero = {
   headline: "The person CTOs call when the replatform can't fail.",
   subheadline: "Principal-level execution with a founder's perspective. Greg Bekher architects, builds, ships, and scales platforms on AWS.",
-  trustLine: "Founder/CTO @ Inline · Ex-Amazon, Tripadvisor, Thrasio · Trusted by CTOs & technology leaders",
+  trustLine: "Founder/CTO @ Inline · Ex-Amazon, PillPack, Tripadvisor · Trusted by CTOs & technology leaders",
   primaryCta: "Book a 30-min intro call",
   secondaryCta: "Download services brief",
   badge: "Built & Scaling 30M+ PV/mo",
@@ -44,10 +44,10 @@ export const hero = {
 export const proofLogos = [
   { name: "Amazon", logo: "amazon" },
   { name: "Tripadvisor", logo: "tripadvisor" },
-  { name: "Thrasio", logo: "thrasio" },
   { name: "Caring", logo: "caring" },
   { name: "Inline", logo: "inline" },
   { name: "Tenable", logo: "tenable" },
+  { name: "Thrasio", logo: "thrasio" },
   { name: "Northrop Grumman", logo: "northrop-grumman" },
 ];
 
