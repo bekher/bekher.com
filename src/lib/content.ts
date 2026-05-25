@@ -263,7 +263,7 @@ export const workSteps: WorkStep[] = [
 
 export const idealFit = {
   goodFit: [
-    "Scaling startups, marketplaces, healthtech/regulated, agentic AI, media/adtech, e-commerce",
+    "Enterprise, scale-stage startups, marketplaces, healthtech/regulated, agentic AI, media/adtech, e-commerce",
     "Cloud services at scale; High-traffic web properties; 0→1 platform builds",
     "Pain: AWS development, agentic AI architecture, legacy migrations, re-platforming, cloud migration, reliability, scaling",
   ],
