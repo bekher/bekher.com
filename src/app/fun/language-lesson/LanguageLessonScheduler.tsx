@@ -68,6 +68,12 @@ const friendlyDateFmt = new Intl.DateTimeFormat("en-US", {
 
 export function LanguageLessonScheduler() {
   const today = useMemo(() => startOfToday(), []);
+  // Earliest bookable day: skip today and tomorrow, so the soonest is 2 days out.
+  const minDate = useMemo(() => {
+    const d = new Date(today);
+    d.setDate(d.getDate() + 2);
+    return d;
+  }, [today]);
   const [viewYear, setViewYear] = useState(today.getFullYear());
   const [viewMonth, setViewMonth] = useState(today.getMonth());
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -142,7 +148,7 @@ export function LanguageLessonScheduler() {
         <header className="mb-8 text-center">
           <div className="mb-3 text-4xl">💌</div>
           <h1 className="text-3xl font-bold tracking-tight text-rose-900 sm:text-4xl">
-            Greetings, Hailey! 💕
+            Greetings, Hailey! 🌹
           </h1>
           <p className="mt-3 text-base text-rose-700/90 sm:text-lg">
             Let&apos;s schedule your Russian lesson with Greg.
@@ -197,21 +203,21 @@ export function LanguageLessonScheduler() {
           <div className="grid grid-cols-7 gap-1">
             {cells.map((date, i) => {
               if (!date) return <div key={`blank-${i}`} />;
-              const isPast = date < today;
+              const isDisabled = date < minDate;
               const isSelected =
                 selectedDate !== null && dayKey(date) === dayKey(selectedDate);
               return (
                 <button
                   key={dayKey(date)}
                   type="button"
-                  disabled={isPast}
+                  disabled={isDisabled}
                   onClick={() => handleSelectDay(date)}
                   aria-pressed={isSelected}
                   aria-label={longDateFmt.format(date)}
                   className={cn(
                     "flex aspect-square items-center justify-center rounded-xl text-sm font-medium transition-all",
-                    isPast && "cursor-not-allowed text-rose-200",
-                    !isPast &&
+                    isDisabled && "cursor-not-allowed text-rose-200",
+                    !isDisabled &&
                       !isSelected &&
                       "text-rose-800 hover:bg-rose-100 hover:scale-105",
                     isSelected &&
@@ -276,20 +282,20 @@ export function LanguageLessonScheduler() {
               </p>
               <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:justify-center">
                 <Button
-                  href={mailtoHref}
+                  href={smsHref}
                   variant="primary"
                   size="large"
                   className="bg-rose-600 hover:bg-rose-700 focus:ring-rose-500"
                 >
-                  📧 Email Greg
+                  💬 Text Greg
                 </Button>
                 <Button
-                  href={smsHref}
+                  href={mailtoHref}
                   variant="secondary"
                   size="large"
                   className="border-rose-300 text-rose-700 hover:border-rose-400 hover:bg-rose-50"
                 >
-                  💬 Text Greg
+                  📧 Email Greg
                 </Button>
               </div>
             </div>
@@ -297,7 +303,7 @@ export function LanguageLessonScheduler() {
         </div>
 
         <p className="mt-6 text-center text-xs text-rose-400">
-          Made with 💕 for Hailey
+          Made with 🫶 for Hailey
         </p>
       </div>
     </main>
